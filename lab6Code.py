@@ -1,3 +1,4 @@
+import yaml
 data = yaml.safe_load(open('crai0263-credentials.yml'))
 
 user = data ['creds']['username']
@@ -18,7 +19,7 @@ for _ in repo.get_pulls(state='all'):
     pulls += 1
 
 default_branch = repo.get_branch(repo.default_branch)
-for _ in repo.get_commits(default_branch.commit.sha)
+for _ in repo.get_commits(default_branch.commit.sha):
     commit += 1
 
 print(f"There are {branch} branches")
